@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Explore o Mundo</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        function toggleAnswer(id) {
+            const answer = document.getElementById(id);
+            answer.style.display = answer.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
     <h1>Explore o Mundo</h1>
@@ -21,5 +27,24 @@
         Planeje sua próxima viagem agora mesmo! 
         <a href="https://www.voegol.com.br/" target="_blank">Clique aqui</a> para começar.
     </p>
+
+    <div class="faq">
+        <h2>Perguntas Frequentes:</h2>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer('answer1')">Qual é o melhor destino para praia?</div>
+            <div class="faq-answer" id="answer1">Recomendamos Balneário Camboriú para quem busca praias incríveis e infraestrutura de primeira.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer('answer2')">Quais são as opções para ecoturismo?</div>
+            <div class="faq-answer" id="answer2">Capitólio - MG é perfeito para quem ama natureza e paisagens deslumbrantes.</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer('answer3')">Qual cidade é ideal para conhecer história e cultura?</div>
+            <div class="faq-answer" id="answer3">Brasília - DF oferece um mergulho na arquitetura moderna e na história do Brasil.</div>
+        </div>
+    </div>
 </body>
 </html>
